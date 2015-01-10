@@ -190,18 +190,19 @@
     var mobile = $('input[name=mobile]').val();
 
     if (!uname) {
-//      ___log("名称缺失");
+      ___log("名称缺失");
       return alert("请填写名称");
     }
 
     if (!mobile) {
-//      ___log("电话缺失");
+      ___log("电话缺失");
       return alert("请填写电话");
     }
 
-    alert('test fine!');
-    return;
-
+    // 下面3行为测试代码，实际投放时请注释掉
+//    alert(uname);
+//    alert(mobile);
+//    return;
 
     window._CiQ10412 = window._CiQ10412 || [];
     window._CiQ10412.push(['_trackEvent', {
