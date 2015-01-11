@@ -1,8 +1,17 @@
 /* 全局方法 */
 /* 变量 */
-body {
+html, body {
   margin: 0;
-  padding-top: 70px; }
+  height: 100%; }
+
+body {
+  padding-top: 60px;
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */ }
 
 button:focus {
   outline: 0; }
@@ -32,6 +41,7 @@ button:focus {
   left: 0;
   right: 0;
   height: 60px;
+  z-index: 1;
   line-height: 60px;
   background-color: #d9d9d9;
   box-shadow: 0px 2px #bfbfbf;
@@ -51,37 +61,49 @@ button:focus {
   .navbar .logo {
     vertical-align: middle; }
 
-.content img {
-  width: 100%; }
-.content p {
-  margin-top: 7px; }
-.content .title-top {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center; }
-.content .title-second {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #acacac; }
-.content .small-title {
-  font-weight: bolder;
-  text-align: left;
-  font-size: 18px;
-  margin-bottom: 7px;
-  margin-top: 30px; }
-.content .button-line {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 60px; }
-  .content .button-line .book-btn {
-    color: white;
+.container {
+  height: 100%;
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */ }
+
+.content {
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 40px; }
+  .content img {
+    width: 100%; }
+  .content p {
+    margin-top: 7px; }
+  .content .title-top {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center; }
+  .content .title-second {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #acacac; }
+  .content .small-title {
+    font-weight: bolder;
+    text-align: left;
     font-size: 18px;
-    height: 37px;
-    width: 237px;
-    border: 0;
-    background-color: #d40e16;
-    border-radius: 4px; }
+    margin-bottom: 7px;
+    margin-top: 30px; }
+  .content .button-line {
+    text-align: center;
+    margin-top: 40px; }
+    .content .button-line .book-btn {
+      color: white;
+      font-size: 18px;
+      height: 37px;
+      width: 237px;
+      border: 0;
+      background-color: #d40e16;
+      border-radius: 4px; }
 
 .form-page {
   display: -webkit-box;
@@ -99,11 +121,8 @@ button:focus {
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
-  position: fixed;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 100%;
+  min-height: 430px;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#aaa)); }
   .form-page .form-title {
     font-size: 28px;

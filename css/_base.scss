@@ -42,3 +42,9 @@
   opacity: $opacity;
   z-index: $z-index;
 }
+
+@mixin box-sizing($val) {
+  -moz-box-sizing:    $val;   /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: $val;   /* Safari 3-4, also probably droppable */
+  box-sizing:        $val;   /* Everything else */
+}
