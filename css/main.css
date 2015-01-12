@@ -98,7 +98,6 @@ button {
       margin-right: 5px; }
 
 .container {
-  z-index: 1;
   width: 100%;
   -webkit-flex: 1;
   flex: 1;
