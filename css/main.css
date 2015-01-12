@@ -5,7 +5,6 @@ html, body {
   height: 100%; }
 
 body {
-  padding-top: 60px;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
   -webkit-box-sizing: border-box;
@@ -16,11 +15,34 @@ body {
 button:focus {
   outline: 0; }
 
+button {
+  -webkit-user-select: none; }
+
 .hide {
   display: none !important; }
 
+.header-panel {
+  height: 100%;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center; }
+
 /* 导航栏 */
 .navbar {
+  z-index: 1;
+  width: 100%;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -36,17 +58,26 @@ button:focus {
   justify-content: space-between;
   -webkit-align-items: center;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  -moz-box-sizing: border-box;
+  /* Firefox 1, probably can drop this */
+  -webkit-box-sizing: border-box;
+  /* Safari 3-4, also probably droppable */
+  box-sizing: border-box;
+  /* Everything else */
   height: 60px;
-  z-index: 1;
   line-height: 60px;
   background-color: #d9d9d9;
   box-shadow: 0px 2px #bfbfbf;
   padding-left: 13px;
-  padding-right: 13px; }
+  padding-right: 13px;
+  /*
+  .disapear {
+    -webkit-transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    transform:  translate(100px);
+    width: 0;
+    opacity: 0;
+  }
+  */ }
   .navbar button {
     color: white;
     font-size: 16px;
@@ -58,11 +89,22 @@ button:focus {
     background-color: #d40e16; }
   .navbar .cancel {
     background-color: #777; }
-  .navbar .logo {
-    vertical-align: middle; }
+  .navbar .logo-span {
+    color: #333;
+    font-weight: bolder; }
+    .navbar .logo-span .logo {
+      width: 36%;
+      vertical-align: middle;
+      margin-right: 5px; }
 
 .container {
-  height: 100%;
+  z-index: 1;
+  width: 100%;
+  -webkit-flex: 1;
+  flex: 1;
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   -moz-box-sizing: border-box;
   /* Firefox 1, probably can drop this */
   -webkit-box-sizing: border-box;
@@ -81,12 +123,17 @@ button:focus {
   .content .title-top {
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center; }
+    text-align: center;
+    font-size: 26px; }
+  .content .title-second-line {
+    font-size: 18px; }
   .content .title-second {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    color: #acacac; }
+    color: #acacac;
+    font-size: 15px;
+    font-weight: normal; }
   .content .small-title {
     font-weight: bolder;
     text-align: left;
@@ -121,11 +168,13 @@ button:focus {
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
+  position: absolute;
   height: 100%;
+  width: 100%;
   min-height: 430px;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#aaa)); }
   .form-page .form-title {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bolder;
     margin-bottom: 27px; }
   .form-page .form-list {
@@ -135,7 +184,7 @@ button:focus {
     .form-page .form-list li {
       text-align: left;
       width: 280px;
-      margin-bottom: 19px; }
+      margin-bottom: 15px; }
       .form-page .form-list li label {
         display: -webkit-box;
         /* OLD - iOS 6-, Safari 3.1-6 */
@@ -166,11 +215,11 @@ button:focus {
     .form-page .form-list li.title-item {
       font-size: 18px;
       color: black;
-      margin-bottom: 33px; }
+      margin-bottom: 30px; }
       .form-page .form-list li.title-item p {
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 20px;
+        font-size: 18px;
         color: #4c4c4c; }
       .form-page .form-list li.title-item span {
         color: #d40e16;
@@ -184,7 +233,7 @@ button:focus {
       font-size: 24px;
       color: white; }
     .form-page .form-list li.btn-item .submit-btn {
-      margin-top: 27px;
+      margin-top: 20px;
       background-color: #d40e16; }
     .form-page .form-list li.btn-item .back-btn {
       background-color: #777; }

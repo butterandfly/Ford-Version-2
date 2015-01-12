@@ -11,7 +11,6 @@ html, body {
 }
 
 body {
-  padding-top: $navbar-height;
   @include box-sizing(border-box);
 }
 
@@ -19,19 +18,26 @@ button:focus {
   outline: 0;
 }
 
+button {
+  -webkit-user-select: none;
+}
+
 .hide {
   display: none !important;
 }
 
+.header-panel {
+  height: 100%;
+  @include flex-layout(column, flex-start, center);
+}
+
 /* 导航栏 */
 .navbar {
-  @include flex-layout(row, space-between, center);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $navbar-height;
   z-index: 1;
+  width: 100%;
+  @include flex-layout(row, space-between, center);
+  @include box-sizing(border-box);
+  height: $navbar-height;
   line-height: $navbar-height;
   background-color: #d9d9d9;
   box-shadow: 0px 2px #bfbfbf;
@@ -56,14 +62,36 @@ button:focus {
     background-color: #777;
   }
 
-  // 右侧logo
-  .logo {
-    vertical-align: middle;
+  /*
+  .disapear {
+    -webkit-transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    transform:  translate(100px);
+    width: 0;
+    opacity: 0;
+  }
+  */
+
+  // 左侧logo
+  .logo-span {
+    color: #333;
+    font-weight: bolder;
+
+    .logo {
+      width: 36%;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
   }
 }
 
 .container {
-  height: 100%;
+  z-index: 1;
+  width: 100%;
+  -webkit-flex: 1;
+  flex: 1;
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   @include box-sizing(border-box);
 }
 
@@ -84,6 +112,11 @@ button:focus {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 26px;
+  }
+
+  .title-second-line {
+    font-size: 18px;
   }
 
   .title-second {
@@ -91,6 +124,8 @@ button:focus {
     margin-bottom: 10px;
     text-align: center;
     color: #acacac;
+    font-size: 15px;
+    font-weight: normal;
   }
 
   .small-title {
@@ -120,12 +155,14 @@ button:focus {
 // 表格页
 .form-page {
   @include flex-layout(column, center, center);
+  position: absolute;
   height: 100%;
+  width: 100%;
   min-height: 430px;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#aaa));
 
   .form-title {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bolder;
     margin-bottom: 27px;
   }
@@ -135,7 +172,7 @@ button:focus {
     li {
       text-align: left;
       width: 280px;
-      margin-bottom: 19px;
+      margin-bottom: 15px;
 
       label {
         @include flex-layout(row, flex-start, center);
@@ -161,12 +198,12 @@ button:focus {
     li.title-item {
       font-size: 18px;
       color: black;
-      margin-bottom: 33px;
+      margin-bottom: 30px;
 
       p {
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 20px;
+        font-size: 18px;
         color: #4c4c4c;
       }
 
@@ -189,7 +226,7 @@ button:focus {
       }
 
       .submit-btn {
-        margin-top: 27px;
+        margin-top: 20px;
         background-color: #d40e16;
       }
 
