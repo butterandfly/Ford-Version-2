@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
   <title>福特福睿斯汽车测评</title>
   <link rel="stylesheet" href="css/main.css">
 
@@ -20,9 +18,21 @@
   </script>
   <!-- End Tag Manager -->
 
+  <style>
+    .fixed-hack {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 10px;
+      width: 100%;
+      background-color: red;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body>
 
+<!--<div class="fixed-hack"></div>-->
 <div class="header-panel">
 <div class="navbar">
   <span class="logo-span">
@@ -38,13 +48,16 @@
 <div class="container">
   <div class="content">
     <h1 class="title-top">10万元级家用车最佳选择</h1>
+
     <h1 class="title-top title-second-line">福特福睿斯全面测评</h1>
     <h3 class="title-second">（转载自专业汽车测评网站）</h3>
+
+    <P align=center class="first-img"><IMG border=0 alt=""
+                         data-original="img/cars/first.jpg">
+
     <P class="small-title">外观：延续家族式设计 时尚大气</P>
     <P>
       　　长安福特ESCORT，其中文名称为“福睿斯”。外观上来看，新车延续了概念版的设计理念，大气的造型有种小号“蒙迪欧”的味道，前脸上又有“阿斯顿·马丁”式的视觉效果，具备了讨好中国消费者的实力，整体外形稳重时尚的设计风格总体满足家庭用户需求。</P>
-    <P align=center><IMG border=0 alt=""
-                         data-original="img/cars/489121.jpg">
     </P>
     <P align=center><IMG border=0 alt=""
                          data-original="img/cars/489120.jpg">
@@ -123,57 +136,62 @@
 
     <!-- 结论 -->
     <P class="small-title">总结：</P>
-    <P>　　福睿斯作为长安福特主打家用市场推出的一款入门紧凑级车型，凭借的不仅仅是卖相，在内饰舒适度以及空间表现使得福睿斯在产品性上有着不错的竞争力，尤其在车身尺寸方面相较于同级有很大优势，满足家庭用车对宽敞空间的需求，给别克凯越、宝来、科鲁兹等合资紧凑型家用车形成压力</p>
-    <p>　　稳扎稳打的实在和周到就是最有力的武器，可是福睿斯并不满足于此，在千篇一律的面孔当中福睿斯更奢求个性，所以它大胆地在设计上给了你一个深刻得难以忘记的印象。是时候让平凡不再平庸，即使是小人物也无需忍受那刻板无聊的面孔，同样能够用个性招摇。</P>
-    <div class="button-line"><button class="book-btn" type="button">免费试驾</button></div>
+    <!--<P>　　福睿斯作为长安福特主打家用市场推出的一款入门紧凑级车型，凭借的不仅仅是卖相，在内饰舒适度以及空间表现使得福睿斯在产品性上有着不错的竞争力，尤其在车身尺寸方面相较于同级有很大优势，满足家庭用车对宽敞空间的需求，给别克凯越、宝来、科鲁兹等合资紧凑型家用车形成压力</p>-->
+    <!--<p>　　稳扎稳打的实在和周到就是最有力的武器，可是福睿斯并不满足于此，在千篇一律的面孔当中福睿斯更奢求个性，所以它大胆地在设计上给了你一个深刻得难以忘记的印象。是时候让平凡不再平庸，即使是小人物也无需忍受那刻板无聊的面孔，同样能够用个性招摇。</P>-->
+    <p>　　稳扎稳打的实在和周到就是最有力的武器，可是福睿斯并不满足于此，在千篇一律的面孔当中福睿斯更奢求个性，所以它大胆地在设计上给了你一个深刻得难以忘记的印象。是时候让平凡不再平庸，即使是小人物也无需忍受那刻板无聊的面孔，同样能够用个性招摇。</p>
+    <p>　　霸气的外观，宽敝的空间，优秀的安全性能，6.5升的低油耗都完全是针对国内家庭而做的贴心设计，在十万元级的家用车当中，福特福睿斯可算是性价比之王，目前此车刚刚上市正处于最为优惠的阶段，心动不如行动，马上点击预约试驾感受一下这台车的魅力吧。</p>
+    <div class="button-line"></div>
   </div>
+
+
+
+</div> <!-- .container -->
 
   <div class="form-page hide">
     <div class="content-area">
-      <form action="jquery.js">
-        <legend class="form-title">在线预约可获得更多优惠：</legend>
+      <form>
+        <legend class="form-title">在线预约：</legend>
         <ul class="form-list">
-          <li class="title-item">
-            <p>请留下您的联系方法</p>
-            <p>我们的客服将会与您联系</p>
-           <!--
-            <p>官方指导价：<span>9.68万元起</span></p>
-            <p>现在预约还有更多优惠等着你</p>
-            -->
-          </li>
           <li>
-            <label>
-              <span>姓 名：</span>
-              <input name="uname" type="text">
-            </label>
+            <input name="uname" type="text" placeholder="输入您的姓名">
           </li>
 
           <li>
-            <label>
-              <span>手 机：</span>
-              <input name="mobile" type="tel">
-            </label>
+            <input name="mobile" type="tel" placeholder="输入您的电话">
+          </li>
+
+          <li class="sex-line">
+            <label><input type="radio" name="sex" value="male" checked>先生</label>
+            <label><input type="radio" name="sex" value="female">女士</label>
           </li>
 
           <li class="btn-item">
             <button id="submit" class="submit-btn" type="button">提交</button>
           </li>
-          <!--
-          <li class="btn-item">
-            <button class="back-btn" type="button">返回文章</button>
-          </li>
-          -->
         </ul>
       </form>
     </div>
-  </div>
+  </div> <!-- form-page -->
+
+</div> <!-- header-panel -->
+
+<div class="bottom-float">
+  <div class="footer-backdrop"></div>
+  <!--<a href="tel:13352828007" class="call"><span class="icon-phone"></span>电话咨询</a>-->
+  <a href="tel:020-38217331" class="call"><img src="img/phone.png" />电话咨询</a>
+  <span class="cutting-line"></span>
+  <!--<a class="bottom-book"><span class="icon-pencil"></span>预约试驾</a>-->
+  <a class="bottom-book"><img src="img/pen.png"/>预约试驾</a>
+  <a class="bottom-cancel hide"><img src="img/pen.png"/>返回文章</a>
 </div>
-</div>
+
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery.lazyload/jquery.lazyload.min.js"></script>
 
 <!-- 监测代码part1 -->
 <script type="text/javascript">
+  var html = $(document.body).html();
+  console.log(html);
   (function() {
     window._CiQ10412 = window._CiQ10412 || [];
     window._CiQ10412.push(['_cookieUseRootDomain', true]);
@@ -188,130 +206,8 @@
 </script>
 
 <!-- 页面交互代码 -->
-<script>
-  // lazyload
-  $('.content img').lazyload({
-    threshold: 700,
-    container: $(".container")
-  });
+<script src="js/main.js"></script>
 
-  // 判断页面是否支持触摸事件
-  var TAPSTART, TAPEND;
-  if (typeof(window.ontouchstart) != 'undefined') {
-    TAPSTART = 'touchstart';
-    TAPEND = 'touchend';
-  } else if (typeof(window.onmspointerdown) != 'undefined') {
-    // 呵呵。
-    TAPSTART = 'MSPointerDown';
-    TAPEND = 'MSPointerUp';
-  } else {
-    TAPSTART = 'mousedown';
-    TAPEND = 'mouseup';
-  }
-
-  var formPage = $('.form-page'),
-      contentPage = $('.content'),
-      rightBookBtn = $('button.book'),
-      bookBtn = $('button.book-btn'),
-      cancelBtn = $('button.cancel'),
-      backBtn = $('button.back-btn');
-
-  function toggleFormPage(show) {
-    if (show) {
-      formPage.removeClass('hide');
-    } else {
-      formPage.addClass('hide');
-    }
-  }
-
-  // 该方法返回文章页
-  function backToArticle() {
-    toggleFormPage(false);
-    contentPage.removeClass('hide');
-//    rightBookBtn.show();
-//    rightBookBtn.removeClass('disapear')
-    rightBookBtn.removeClass('hide');
-    cancelBtn.addClass('hide');
-  }
-
-  // 该方法跳到表单页
-  function jumpToForm() {
-    toggleFormPage(true);
-    contentPage.addClass('hide');
-//    rightBookBtn.hide();
-//    rightBookBtn.addClass('disapear')
-    rightBookBtn.addClass('hide');
-    cancelBtn.removeClass('hide');
-  }
-
-
-  // 进入表单的按钮事件
-  rightBookBtn.on(TAPEND, function() {
-    jumpToForm();
-  });
-  // ios中设置了overflow-scrolling为touch的容器内不能再触发touch事件，暂时用click代替
-  // 迟点解决。。。
-  bookBtn.on('click', function() {
-    jumpToForm();
-  });
-
-  // 返回文章的按钮事件
-  cancelBtn.on(TAPEND, function() {
-    backToArticle();
-  });
-  backBtn.on(TAPEND, function() {
-    backToArticle();
-  });
-
-  // 提交按钮事件
-  // 发送数据
-  $(".submit-btn").on(TAPEND, function(ev) {
-    ev.preventDefault();
-    // 注意，这里使用setTimeout是因为ios上直接调用含alert的方法会导致事件在其他touchend事件触发时的二次触发
-    setTimeout(function() {
-      var uname = $('input[name=uname]').val();
-      var mobile = $('input[name=mobile]').val();
-
-      if (!uname) {
-        ___log("名称缺失");
-        return alert("请填写名称");
-      }
-
-      if (!mobile) {
-        ___log("电话缺失");
-        return alert("请填写电话");
-      }
-
-      // 下面3行为测试代码，实际投放时请注释掉
-//      alert(uname);
-//      alert(mobile);
-//      console.log('I love Kenny');
-//      return;
-
-      _CWiQ.push(['_trackReg', 1]);
-      ___log('submit');
-      window._CiQ10412 = window._CiQ10412 || [];
-      window._CiQ10412.push(['_trackEvent', {
-        type: 1,
-        labels:[
-          {'1':uname}
-          ,{'2':mobile}
-          ,{'3':''}
-          ,{'4':''}
-          ,{'5':''}
-          ,{'6':''}
-          ,{'7':''}
-        ],
-        values: [
-          {'数量': 1}
-        ]
-      }]);
-      window.CClickiV3 && window.CClickiV3[10412] && window.CClickiV3[10412]._flushObserver(function(){
-        alert("恭喜你预约成功！");
-      });
-    }, 0);
-  })
-</script>
 
 <!-- 监测代码part2 -->
 <script>

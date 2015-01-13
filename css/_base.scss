@@ -18,6 +18,11 @@
   align-items: $layout2;
 }
 
+@mixin flex($num) {
+  flex: $num;
+  -webkit-flex: $num;
+}
+
 @mixin no-around-space() {
   margin: 0;
   padding: 0;
