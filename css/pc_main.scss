@@ -5,7 +5,68 @@ body {
 }
 
 .modal-dialog {
-  width: 400px;
+  width: 600px;
+
+  .modal-content {
+    background-image: url("../img/bg.png");
+  }
+
+  .modal-title {
+    text-align: center;
+  }
+
+  .form-list {
+    @include simple-list();
+    height: 250px;
+    margin-top: 20px;
+
+    li {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 5px;
+      font-size: 17px;
+
+      input {
+        width: 200px;
+        margin-left: 5px;
+        height: 35px;
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .submit-btn {
+    background-color: #e45050;
+    border-radius: 3px;
+    border: 0;
+    //  box-shadow: 0px 3px #CA4848;
+
+    width: 190px;
+    height: 35px;
+  }
+
+  .submit-btn:hover {
+    background-color: #e45050;
+  }
+
+  .oil-card {
+    float: right;
+  }
+
+  .modal-body {
+    position: relative;
+  }
+
+  .pretty-car {
+    position: absolute;
+    left: -30px;
+    bottom: -24px;
+  }
 }
 
 .container {
@@ -69,45 +130,7 @@ body {
   }
 }
 
-.modal-title {
-  text-align: center;
-}
 
-.form-list {
-  @include simple-list();
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  li {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-size: 17px;
-
-    input {
-      width: 200px;
-      margin-left: 5px;
-      height: 35px;
-      padding-left: 5px;
-    }
-  }
-}
-
-.submit-btn {
-  background-color: #e45050;
-  border-radius: 3px;
-  border: 0;
-//  box-shadow: 0px 3px #CA4848;
-}
-
-.submit-btn:hover {
-  background-color: #e45050;
-}
 
 .float-footer {
   position: fixed;
