@@ -1,0 +1,114 @@
+/* 全局方法 */
+body {
+  background-color: #f0f0f0; }
+
+.modal-dialog {
+  width: 400px; }
+
+.container {
+  width: 970px;
+  position: relative; }
+
+.header {
+  text-align: center;
+  position: relative;
+  background-image: url("../img/cf.png"); }
+  .header .button-line {
+    position: absolute;
+    bottom: 28px;
+    width: 100%;
+    text-align: center; }
+    .header .button-line button {
+      height: 40px;
+      width: 220px;
+      color: white;
+      background-color: #f95d5b;
+      border-radius: 3px;
+      box-shadow: 0px 3px #CA4848;
+      border: 0;
+      font-size: 18px; }
+
+.content {
+  margin-bottom: 100px; }
+  .content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 24px; }
+  .content img {
+    border: 2px #c9c9c9 solid; }
+  .content .small-title {
+    font-size: 22px;
+    color: #333;
+    margin-top: 45px;
+    margin-bottom: 27px;
+    text-align: center; }
+
+.modal-title {
+  text-align: center; }
+
+.form-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .form-list li {
+    text-align: center;
+    margin-bottom: 20px; }
+  .form-list label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 17px; }
+    .form-list label input {
+      width: 200px;
+      margin-left: 5px;
+      height: 35px;
+      padding-left: 5px; }
+
+.submit-btn {
+  background-color: #e45050;
+  border-radius: 3px;
+  border: 0; }
+
+.submit-btn:hover {
+  background-color: #e45050; }
+
+.float-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 83px; }
+  .float-footer .backdrop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: black;
+    opacity: 0.5; }
+  .float-footer .container {
+    width: 700px;
+    height: 100%;
+    color: white;
+    line-height: 83px; }
+    .float-footer .container span {
+      vertical-align: middle;
+      line-height: 83px;
+      font-size: 26px; }
+      .float-footer .container span img {
+        margin-right: 10px; }
+    .float-footer .container button {
+      height: 40px;
+      width: 220px;
+      color: white;
+      background-color: #f95d5b;
+      border-radius: 3px;
+      box-shadow: 0px 3px #CA4848;
+      border: 0;
+      font-size: 18px;
+      vertical-align: middle;
+      line-height: 40px;
+      margin-left: 50px; }
