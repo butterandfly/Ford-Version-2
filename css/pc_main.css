@@ -2,44 +2,74 @@
 body {
   background-color: #f0f0f0; }
 
-.modal-dialog {
+#book-form .modal-dialog {
   width: 600px; }
-  .modal-dialog .modal-content {
-    background-image: url("../img/bg.png"); }
-  .modal-dialog .modal-title {
+  #book-form .modal-dialog .modal-title {
     text-align: center; }
-  .modal-dialog .form-list {
+  #book-form .modal-dialog .form-list {
     list-style: none;
     margin: 0;
     padding: 0;
     height: 250px;
-    margin-top: 20px; }
-    .modal-dialog .form-list li {
-      text-align: center;
+    margin: 20px 0 30px 0;
+    padding: 0px 27px; }
+    #book-form .modal-dialog .form-list li {
+      text-align: left;
       margin-bottom: 20px; }
-    .modal-dialog .form-list label {
+    #book-form .modal-dialog .form-list li.get-50rmb {
+      font-size: 20px;
+      color: #666; }
+      #book-form .modal-dialog .form-list li.get-50rmb img {
+        margin-top: -5px;
+        margin-right: 13px;
+        width: 77px; }
+      #book-form .modal-dialog .form-list li.get-50rmb a {
+        color: #e45050;
+        text-decoration: underline;
+        font-size: 15px; }
+      #book-form .modal-dialog .form-list li.get-50rmb a.show-detail {
+        cursor: pointer; }
+    #book-form .modal-dialog .form-list li.input-line {
+      border-bottom: 1px #ddd solid;
+      padding-bottom: 30px;
+      margin-top: 25px;
+      margin-bottom: 15px; }
+      #book-form .modal-dialog .form-list li.input-line span {
+        color: #e45050; }
+    #book-form .modal-dialog .form-list li.agree-line {
+      color: #777; }
+      #book-form .modal-dialog .form-list li.agree-line input {
+        vertical-align: top; }
+      #book-form .modal-dialog .form-list li.agree-line p {
+        display: inline-block; }
+        #book-form .modal-dialog .form-list li.agree-line p span {
+          color: #e45050; }
+    #book-form .modal-dialog .form-list li.submit-line {
+      text-align: center; }
+    #book-form .modal-dialog .form-list label {
       display: inline-block;
       max-width: 100%;
       margin-bottom: 5px;
-      font-size: 17px; }
-      .modal-dialog .form-list label input {
-        width: 200px;
-        margin-left: 5px;
+      font-size: 17px;
+      margin-right: 20px;
+      color: #555; }
+      #book-form .modal-dialog .form-list label input {
+        width: 170px;
+        margin-left: 0;
         height: 35px;
         padding-left: 5px; }
-  .modal-dialog .submit-btn {
+  #book-form .modal-dialog .submit-btn {
     background-color: #e45050;
     border-radius: 3px;
     border: 0;
     width: 190px;
-    height: 35px; }
-  .modal-dialog .submit-btn:hover {
+    font-size: 20px;
+    height: 40px; }
+  #book-form .modal-dialog .submit-btn:hover {
     background-color: #e45050; }
-  .modal-dialog .oil-card {
-    float: right; }
-  .modal-dialog .modal-body {
+  #book-form .modal-dialog .modal-body {
     position: relative; }
-  .modal-dialog .pretty-car {
+  #book-form .modal-dialog .pretty-car {
     position: absolute;
     left: -30px;
     bottom: -24px; }
@@ -82,12 +112,22 @@ body {
     margin-bottom: 27px;
     text-align: center; }
 
+#detail-modal {
+  color: #666; }
+  #detail-modal .modal-title {
+    color: #333;
+    text-align: center; }
+
+.modal-header {
+  background-color: #EFEFEF; }
+
 .float-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 83px; }
+  height: 83px;
+  z-index: 1; }
   .float-footer .backdrop {
     position: absolute;
     left: 0;
