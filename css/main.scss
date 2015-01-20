@@ -217,15 +217,35 @@ button {
 // 表格页
 .form-page {
   @include flex-layout(column, center, center);
-  position: absolute;
-  top: $navbar-height;
-  bottom: 0;
-  z-index: 3;
+  position: relative;
   width: 100%;
   min-height: 430px;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#aaa));
+  height: 100%;
+  //  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#aaa));
+  background-color: black;
+
+  .title-area {
+    @include flex-layout(row, flex-start, center);
+    margin-bottom: 30px;
+    width: 280px;
+    color: #eee;
+    text-align: left;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: #eee;
+    }
+
+    .attention {
+      color: yellow;
+      font-size: 13px;
+    }
+  }
 
   .form-title {
+    color: #fff;
     font-size: 22px;
     font-weight: bolder;
     margin-bottom: 20px;
@@ -250,13 +270,33 @@ button {
       }
     }
 
-    li.sex-line {
-      label {
-        margin-right: 20px;
-        font-size: 19px;
+    li.get-50rmb {
+      font-size: 14px;
+      color: #fff;
 
-        input[type=radio] {
-          margin-right: 5px;
+      span {
+        color: #e45050;
+      }
+
+      a {
+        color: #e45050;
+        font-size: 10px;
+      }
+    }
+
+    li.agree-line {
+      color: #aaa;
+      input {
+        vertical-align: top;
+      }
+
+      p {
+        display: inline-block;
+        width: 250px;
+        margin-top: 0;
+        font-size: 13px;
+        span {
+          color: #e45050;
         }
       }
     }
@@ -285,21 +325,93 @@ button {
     // 按钮列
     li.btn-item {
       button {
+        display: block;
         width: 100%;
         height: 46px;
         border: 0;
         font-size: 24px;
         color: white;
+
+        margin-bottom: 10px;
       }
 
       .submit-btn {
-        margin-top: 20px;
+        margin-top: 10px;
         background-color: #d40e16;
       }
 
-      .back-btn {
+      .back2top {
         background-color: #777;
       }
+    }
+  }
+}
+
+.sf-modal {
+  @include full-screen();
+  z-index: 999;
+  @include flex-layout(column, center, center);
+
+  color: black;
+
+  .sf-modal-backdrop {
+    @include backdrop(black, 0.6, -1);
+  }
+
+  .sf-modal-box {
+    @include flex-layout(column, center, center);
+    width: 280px;
+    //    height: 320px;
+
+    border: 1px #777 solid;
+    border-radius: 3px;
+    background: #fff;
+  }
+
+  .sf-modal-header {
+    width: 100%;
+    h3 {
+      margin: 0;
+      padding: 5px;
+    }
+  }
+
+  .sf-modal-close {
+    border: 0;
+    padding: 0 3px;
+    background: white;
+
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+  }
+
+  .sf-modal-content {
+    //    @include flex(1);
+    //    overflow: scroll;
+    //    -webkit-overflow-scrolling: touch;
+    //    z-index: 0;
+    text-align: left;
+
+    p {
+      margin: 0;
+      padding: 5px;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 5px;
+    }
+
+    ol {
+      margin: 0;
+      padding: 0 5px 10px 23px;
+      font-size: 10px;
     }
   }
 }

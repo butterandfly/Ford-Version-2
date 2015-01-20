@@ -225,14 +225,41 @@ button {
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  z-index: 3;
+  position: relative;
   width: 100%;
   min-height: 430px;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#aaa)); }
+  height: 100%;
+  background-color: black; }
+  .form-page .title-area {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 280px;
+    color: #eee;
+    text-align: left; }
+    .form-page .title-area p {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: #eee; }
+    .form-page .title-area .attention {
+      color: yellow;
+      font-size: 13px; }
   .form-page .form-title {
+    color: #fff;
     font-size: 22px;
     font-weight: bolder;
     margin-bottom: 20px; }
@@ -258,11 +285,25 @@ button {
         height: 40px;
         border: 1px solid #ccc;
         border-radius: 2px; }
-    .form-page .form-list li.sex-line label {
-      margin-right: 20px;
-      font-size: 19px; }
-      .form-page .form-list li.sex-line label input[type=radio] {
-        margin-right: 5px; }
+    .form-page .form-list li.get-50rmb {
+      font-size: 14px;
+      color: #fff; }
+      .form-page .form-list li.get-50rmb span {
+        color: #e45050; }
+      .form-page .form-list li.get-50rmb a {
+        color: #e45050;
+        font-size: 10px; }
+    .form-page .form-list li.agree-line {
+      color: #aaa; }
+      .form-page .form-list li.agree-line input {
+        vertical-align: top; }
+      .form-page .form-list li.agree-line p {
+        display: inline-block;
+        width: 250px;
+        margin-top: 0;
+        font-size: 13px; }
+        .form-page .form-list li.agree-line p span {
+          color: #e45050; }
     .form-page .form-list li.title-item {
       font-size: 18px;
       color: black;
@@ -278,13 +319,97 @@ button {
         vertical-align: middle;
         font-weight: bolder; }
     .form-page .form-list li.btn-item button {
+      display: block;
       width: 100%;
       height: 46px;
       border: 0;
       font-size: 24px;
-      color: white; }
+      color: white;
+      margin-bottom: 10px; }
     .form-page .form-list li.btn-item .submit-btn {
-      margin-top: 20px;
+      margin-top: 10px;
       background-color: #d40e16; }
-    .form-page .form-list li.btn-item .back-btn {
+    .form-page .form-list li.btn-item .back2top {
       background-color: #777; }
+
+.sf-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: black; }
+  .sf-modal .sf-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1; }
+  .sf-modal .sf-modal-box {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 280px;
+    border: 1px #777 solid;
+    border-radius: 3px;
+    background: #fff; }
+  .sf-modal .sf-modal-header {
+    width: 100%; }
+    .sf-modal .sf-modal-header h3 {
+      margin: 0;
+      padding: 5px; }
+  .sf-modal .sf-modal-close {
+    border: 0;
+    padding: 0 3px;
+    background: white;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: 0.2; }
+  .sf-modal .sf-modal-content {
+    text-align: left; }
+    .sf-modal .sf-modal-content p {
+      margin: 0;
+      padding: 5px; }
+    .sf-modal .sf-modal-content h4 {
+      margin: 0;
+      padding: 5px; }
+    .sf-modal .sf-modal-content ol {
+      margin: 0;
+      padding: 0 5px 10px 23px;
+      font-size: 10px; }
